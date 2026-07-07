@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function addOperation(){
+            console.log("event fired")
+            var firstnumbervalue = document.getElementsByName("fired")[0].value
+            var secondnumbervalue = document.getElementsByName("fired")[1].value
+            var sum = Number(firstnumbervalue) + Number(secondnumbervalue)
+            document.getElementById("output").innerHTML=sum
+            // console.log(sum)
+            document.getElementsByName("result")[0].value=sum
+            }
+        function subOperation(){
+            console.log("event fired")
+            var firstnumbervalue = document.getElementsByName("fired")[0].value
+            var secondnumbervalue = document.getElementsByName("fired")[1].value
+            var sub = Number(firstnumbervalue) - Number(secondnumbervalue)
+            
+            // console.log(sum)
+            document.getElementsByName("result")[0].value= sub
+           }
+        function update(){
+            var h2valueupdate = document.getElementsByTagName("h2")[0].innerHTML;
+            //console.log(h2valueupdate)
+            document.getElementsByTagName("h2")[0].innerHTML = h2valueupdate+ " parser"
+        } 
+    </script>
+</head>
+<body>
+    <h2>DOM Hierarchy</h2>
+    1st Number : <input type="text" name="fired" id="n1"/> <br>
+    
+    2nd Number : <input type="text" name="fired" id="n2"/> <br>
+
+    result: <input type="text" name="result" id="n3" readonly> 
+      <br>
+      <div id="output"></div>
+    <input type="button" value="add value" onclick="addOperation()"/>
+    <input type="button" value="sub value" onclick="subOperation()"/>
+    <input type="button" value="update value" onclick="update()"/>
+</body>
+</html>
