@@ -22,3 +22,19 @@ console.log(
 console.log(
     greading("veera", (fname) => "miss " + fname)
 );  
+// closure function
+function Bank(){
+    let balance = 5000;
+
+
+return {
+    withdraw(amount){
+          balance = balance-amount
+    }
+    deposit(amount){
+         balance = balance+amount
+    }
+}}
+let account = Bank();
+account.withdraw(100);
+account.withdraw(50);
